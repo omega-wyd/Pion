@@ -5,9 +5,8 @@
 # 
 #         USAGE: ./expand.sh 
 # 
-#   DESCRIPTION: Expand passed tar files
-#				 0) take in tar files and check for params
-#				 1) Create temp folder to expand to
+#   DESCRIPTION: Expand compressed tar files in working directory
+#				 1) Create temp folder to expand compressed files to
 #				 2) Loop files to expand and retrieve first, last and email columns
 #				 3) Create a new output file with columns
 # 
@@ -26,8 +25,8 @@
 # Help function with script usage
 help ()
 {
-	echo "Usage ./expand.sh [fileName1.tar.gz] [fileName2.tar.gz] [etc...]"
-	echo "Script can take any # of compressed tar files as params"
+	echo "Usage ./expand.sh"
+	echo "Script can take any # of compressed tar files"
 }
 
 # Check for help call
