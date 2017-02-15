@@ -5,8 +5,9 @@
 # 
 #         USAGE: ./expand.sh 
 # 
-#   DESCRIPTION: Expand compressed tar files in working directory
-#				 1) Create temp folder to expand compressed files to
+#   DESCRIPTION: Expand passed tar files
+#				 0) take in tar files and check for params
+#				 1) Create temp folder to expand to
 #				 2) Loop files to expand and retrieve first, last and email columns
 #				 3) Create a new output file with columns
 # 
@@ -25,8 +26,8 @@
 # Help function with script usage
 help ()
 {
-	echo "Usage ./expand.sh"
-	echo "Script can take any # of compressed tar files"
+	echo "Usage ./expand.sh [fileName1.tar.gz] [fileName2.tar.gz] [etc...]"
+	echo "Script can take any # of compressed tar files as params"
 }
 
 # Check for help call
@@ -50,11 +51,11 @@ do
 done
 
 # Loop over files in tmp
-outfile="outfile.csv"
 for file in $dir/*.csv
 do
 	# awk to take values and append it to new output file
-	awk -F, '{print $2", "$3", "$4}' $file >> $dir/$outfile
+	# calls filter.sh script to filter data and passes in the current .csv file ($file)
+	./filter.sh $file
 done
 
 exit 0

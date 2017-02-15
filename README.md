@@ -22,14 +22,25 @@ expand.sh :
 	Then a for loop checks the filename of all files ending in .tar.gz wiithin $PWD 
 		each file is decompressed and their contents are exproted to the path $PWD/tmp
 	Last the script loops over all the files in $PWD/tmp ending in .csv
-		each file has awk take the 2nd 3rd and 4th parameter which are fname, lname, and email respectively
-		and appends the values to a new comma seperated csv output file in $PWD/tmp/outfile.csv
-
+		the loop calls +x script filter.sh with ./filter.sh $file where the current .csv file is passed as 
+		a parmeter
 
 # --------------------  FILTER  -------------------- #
 
+filter.sh :
+	this script is called inside expand.sh with ./filter.sh $file (file is passing current .csv file as param)
+	the script filters data from Filters data from $PWD/tmp/*.csv files
+	doesnt get header data
+.   retrieves only Canadian female residents
+	takes NULL emails and replaces with dummy address: waldo@weber.edu
+	then outputs the data to $PWD/tmp/outfile.csv
 
-
+	The script begins with a help function if someone calls script with --help as 1st parameter
+	Then the script calls awk -f awksrc inputfile
+	The awksrc file is in $PWD/filter.awk
+		The awksrc file filters data by Canadian Females and prints the firstname, lastname, and email fields
+		If the email field is NULL or empty string it replaces it with a dummy address waldo@weber.edu
+	Last the filtered information is output to $PWD/tmp/output.csv
 
 # --------------------  COMPRESS  -------------------- #
 
