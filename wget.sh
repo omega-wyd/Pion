@@ -36,8 +36,9 @@ fi
 
 
 
-wget icarus.cs.weber.edu/~hvalle/cs3030/MOCK_DATA_$1.tar.gz >> address1
-wget icarus.cs.weber.edu/~hvalle/cs3030/MOCK_DATA_$2.tar.gz >> address2
+wget icarus.cs.weber.edu/~hvalle/cs3030/MOCK_DATA_$1.tar.gz
+wget icarus.cs.weber.edu/~hvalle/cs3030/MOCK_DATA_$2.tar.gz 
+
 
 
 
