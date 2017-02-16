@@ -1,12 +1,30 @@
-# Pion
+
+Homework Assignment 4 Group Project  Pion
+  Authors: [Micheal Brewer](https://github.com/omega-wyd) , [David Mariluch](https://github.com/damooch), [Mashael Al Abbad](https://github.com/Mashael2)
+  CS 3030 &ndash; Hugo Valle
+ 
+
 
 # --------------------  WRAPPER  -------------------- #
-
+wrapper.sh :
+`wrapper.sh` combines the `compress.sh`  `expand.sh`   `filter.sh` `wget.sh`
+`delete.sh`    `filter.awk`  `ftp.sh` and `tar.sh` files.
+ 12 
+ 13 ```bash
+ 14 $ wrapper.sh.sh -y <year1,year2> -e <email> -u <username> -p <password>
+ 15 ```
 
 
 
 # --------------------  WGET  -------------------- #
-
+wget.sh :
+	this script is called with ./wget.sh
+	the script pulls files with wget.
+	
+	The script starts with a help funciton that can be called with --help as param one.
+	```
+	Usage: $0 [year1] [year2]
+	```
 
 
 
