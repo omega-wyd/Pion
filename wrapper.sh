@@ -8,7 +8,7 @@
 #   DESCRIPTION: This script controls 6 other scripts written by team Pion. 
 # 
 #       OPTIONS: ---
-#  REQUIREMENTS: ---
+#  REQUIREMENTS: -y -e -u -p
 #          BUGS: ---
 #         NOTES: ---
 #        AUTHOR: Micheal Brewer (), mbrewerramirez@mail.weber.edu
@@ -68,15 +68,26 @@ fi
 IFS=, read year1 year2 <<< $year
 
 #check to see if year is 2015 or 2016
-if [[ $year1 != 2015 ]] 
+if [[ $year1 != 2015 ]] # || [[ $year2 != 2015 ]]
 then
 	echo "needs to be 2015 or 2016"
 fi
 
+if [[ $year2 != 2016 ]] # || [[ $year1 != 2016 ]]
+then
+	echo "needs to be 2015 or 2016"
+fi
+
+# Calling wget.sh
+./wget.sh $year1 $year2 |
+# Calling expand.sh to expand files.
+./expand.sh $adress1 $address2
 
 
 
-echo $year1 $year2
+
+
+
 
 exit 0
 
