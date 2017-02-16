@@ -76,7 +76,7 @@ fi
 
 
 
-
+echo $year1 $year2
 
 exit 0
 

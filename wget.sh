@@ -36,8 +36,9 @@ fi
 
 
 year1=$1
-address="www.icarus.cs.weber.edu/~hvalle/cs3030/MOCK_DATA_$year.tar.gz"
+address="icarus.cs.weber.edu/~hvalle/cs3030/MOCK_DATA_$year.tar.gz"
 
+wget icarus.cs.weber.edu/~hvalle/cs3030/MOCK_DATA_$1.tar.gz
 wget $address 
 
 
