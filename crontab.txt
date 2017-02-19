@@ -1,0 +1,10 @@
+
+The crontab for our script is
+# min hour day month days of the week
+# 00 - top of every hour
+# 08-17 from 8am to 5pm
+# /6 every 6th hour
+# * * every day of every month
+# 1-5 mon-fri
+
+00 08-17/6 * * 1-5  /Pion/wrapper.sh
