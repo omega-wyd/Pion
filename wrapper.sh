@@ -88,6 +88,9 @@ fi
 
 
 
+#mail -s "file transfered " $email <<< "Succesfully transfered file to FTP  server"<br>
+
+
 
 
 exit 0
