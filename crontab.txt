@@ -7,4 +7,4 @@ The crontab for our script is
 # * * every day of every month
 # 1-5 mon-fri
 
-00 08-17/6 * * 1-5  /Pion/wrapper.sh
+00 08-17/6 * * 1-5  ./wrapper.sh
