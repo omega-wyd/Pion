@@ -81,8 +81,9 @@ fi
 # Calling wget.sh
 ./wget.sh $year1 $year2 |
 # Calling expand.sh to expand files.
-./expand.sh 
-
+./expand.sh |
+# Calling filter.sh 
+./filter.sh
 
 
 
