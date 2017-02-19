@@ -81,7 +81,7 @@ fi
 # Calling wget.sh
 ./wget.sh $year1 $year2 |
 # Calling expand.sh to expand files.
-./expand.sh MOCK_DATA_2015.tar.gz MOCK_DATA_2016.tar.gz 
+./expand.sh 
 
 
 
