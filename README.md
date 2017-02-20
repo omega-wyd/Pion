@@ -11,7 +11,7 @@ wrapper.sh :
 `delete.sh`    `filter.awk`  `ftp.sh` and `tar.sh` files.
  12 
  13 ```bash
- 14 $ wrapper.sh.sh -y <year1,year2> -e <email> -u <username> -p <password>
+ 14 $ ./wrapper.sh -y <year1,year2> -e <email> -u <username> -p <password>
  15 ```
 
 
@@ -23,7 +23,7 @@ wget.sh :
 	
 	The script starts with a help funciton that can be called with --help as param one.
 	```
-	Usage: $0 [year1] [year2]
+	Usage: ./wget.sh [year1] [year2]
 	```
 
 
@@ -49,7 +49,7 @@ filter.sh :
 	this script is called inside expand.sh with ./filter.sh $file (file is passing current .csv file as param)
 	the script filters data from Filters data from $PWD/tmp/*.csv files
 	doesnt get header data
-.   retrieves only Canadian female residents
+.   	retrieves only Canadian female residents
 	takes NULL emails and replaces with dummy address: waldo@weber.edu
 	then outputs the data to $PWD/tmp/outfile.csv
 
