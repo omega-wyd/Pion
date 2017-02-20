@@ -79,15 +79,15 @@ then
 fi
 
 # Calling wget.sh
-./wget.sh $year1 $year2 |
+./wget.sh $year1 $year2 
 # Calling expand.sh to expand files.
-./expand.sh |
+./expand.sh 
 # Calling filter.sh 
-./filter.sh |
+./filter.sh 
 # Calling compress.sh to compress new file
-./compress.sh |
+./compress.sh 
 #calling ftp.sh
-./ftp.sh |
+./ftp.sh 
 #calling delete.sh  
 ./delete.sh
 
