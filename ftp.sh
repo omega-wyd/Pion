@@ -35,6 +35,7 @@ then
 ftp -n $host <<EOF
 quote user $userd
 quote pass $pass
+cd MockData
 put $file
 bye
 EOF
