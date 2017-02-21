@@ -76,3 +76,8 @@ compress.sh :
 
 # --------------------  DELETE   -------------------- #
 
+delete.sh :
+      This script is called with ./delete.sh
+
+	  The script begins with a help function if someone calls the script with --help
+	  This script will clean everything, and delete the temp folder with all the files.
