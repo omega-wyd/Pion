@@ -1,0 +1,386 @@
+commit 8b36b7948daf1ee1fe7737896c852b96e3821c86
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Tue Feb 21 20:12:23 2017 +0000
+
+    fixed
+
+commit d70213d972b6cf386f299e562819416723976e39
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Tue Feb 21 20:09:41 2017 +0000
+
+    accidentally coppied wget to wrapper, undid it
+
+commit 5a8a4cfcef39144e13a4db31340b7406876f82d7
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Tue Feb 21 19:47:50 2017 +0000
+
+    deleted extra lines
+
+commit 5c2c9c4373b5bcbfbb7909c72b3336ad8f292bad
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Tue Feb 21 19:45:35 2017 +0000
+
+    Added echo statements for formatting
+
+commit 5c16b985f29dac1203366b163d1b001bcac0d2e4
+Merge: ae78618 d61e2d9
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Tue Feb 21 19:44:02 2017 +0000
+
+    resolving merge conflicts
+
+commit ae78618c3b9438be976967f6f60a127debcbbdc4
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Tue Feb 21 19:41:44 2017 +0000
+
+    Added echo messages for formatted output
+
+commit d61e2d90ebb8bd88977a144e10078dba82f784ee
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Tue Feb 21 19:37:41 2017 +0000
+
+    fixed wget.sh call
+
+commit 824fb06bd70e655cf157553bb0d70474b5e85ca0
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Tue Feb 21 18:47:27 2017 +0000
+
+    fixed error for system call
+
+commit a911a8ad1c4bef492ce4be1f0a92bb7d56a2fd90
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Tue Feb 21 18:38:29 2017 +0000
+
+    added '' for system call
+
+commit 8c1f90f4a3a7f39a32c641fd795920e8c1a41c98
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Tue Feb 21 18:37:45 2017 +0000
+
+    repaced -eq with ==
+
+commit 199c2c6dddb1ac6f8d41cd753dee55e838325ca6
+Author: Mashael2 <ma01412@icarus.cs.weber.edu>
+Date:   Tue Feb 21 18:23:43 2017 +0000
+
+    Updated the README.md
+
+commit 79c830c019572b84f07f5318c3ed73b382ad903f
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Tue Feb 21 18:18:56 2017 +0000
+
+    changed  to accept special char
+
+commit 6743ce425dacc41b6fb282df69a352a356d1a0dd
+Merge: fb66f19 600b0cc
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Tue Feb 21 18:11:33 2017 +0000
+
+    Merge branch 'master' of https://github.com/omega-wyd/Pion
+    
+    updated wrapper.sh and wget.sh
+
+commit fb66f19468c7d1d33fcd0b2d27f9bb99a8a6128e
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Tue Feb 21 18:11:07 2017 +0000
+
+    added the year validation
+
+commit 9ef886e46eb8831b7a45f9fc7acc0a01d78a4564
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Tue Feb 21 18:09:45 2017 +0000
+
+    added for loop
+
+commit 600b0ccf555cf1757fb26c651e18f13f0f543fad
+Author: Mashael2 <ma01412@icarus.cs.weber.edu>
+Date:   Tue Feb 21 18:08:25 2017 +0000
+
+    Updated the README.md
+
+commit 8c05b485a915f9cbffef855913eba62fb058769b
+Author: Mashael2 <ma01412@icarus.cs.weber.edu>
+Date:   Tue Feb 21 17:51:26 2017 +0000
+
+    add comment to compress.sh
+
+commit 9109f15f5c9af679200397342ad40bdcc4d2073e
+Author: Mashael2 <ma01412@icarus.cs.weber.edu>
+Date:   Tue Feb 21 17:44:40 2017 +0000
+
+    added help function to delete.sh
+
+commit b9a9283fd11f45328e033f73916bafd4af5866c4
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Tue Feb 21 09:56:15 2017 +0000
+
+    trying to update README.md from terminal
+
+commit b547d5800254939b4738e7f0bfd543df213682fc
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Tue Feb 21 09:53:36 2017 +0000
+
+    removed testing files
+
+commit db626e23d232332de90c9b387eea806a7be21c86
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Tue Feb 21 09:44:50 2017 +0000
+
+    Tested wget expand and compress for results
+
+commit 3c146537962772de77bbac0c84e47a1f14388153
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Tue Feb 21 09:40:03 2017 +0000
+
+    put path to outfile.csv in compress.sh
+
+commit 9fa0d0cfae7f4e2fa606af235cc871927d3ee3bc
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Tue Feb 21 09:26:34 2017 +0000
+
+    made ftp.sh (getting could not create file error)
+
+commit 2ecc9d7c9e7d97240c42a8473bd6535f0c5fddfa
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Tue Feb 21 08:09:18 2017 +0000
+
+    had to change my if statements
+
+commit d8482bf77d5baa2a03d1c5ecd89329f7183c591c
+Merge: 5df2460 f539241
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Tue Feb 21 08:03:56 2017 +0000
+
+    Merge branch 'master' of https://github.com/omega-wyd/Pion
+    
+    I added status messages to my scripts
+
+commit 5df246052f48b69886b118c9d4c1bd29131486d3
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Tue Feb 21 07:57:07 2017 +0000
+
+    modified expand.sh and filter.sh to include status messages
+
+commit f5392415787e054b27de1ca87ce12a2d243d845a
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Tue Feb 21 01:05:56 2017 +0000
+
+    added a rough skeleton
+
+commit 0d69caaf2389ab5eb88b2ddece03a6fe536989c1
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Tue Feb 21 01:05:18 2017 +0000
+
+    updated the ftp call so it has values going in.
+
+commit 8725bee58c9ca081ed06c40713f637288cf50fb1
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Tue Feb 21 00:31:32 2017 +0000
+
+    made ftp.sh executable
+
+commit f1489952e5986a66762104150632bfbd76236ec0
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Tue Feb 21 00:24:04 2017 +0000
+
+    re arranged sequence order
+
+commit cce3e585248a3bfb9729df3e46e52a87d7b62b4e
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Tue Feb 21 00:19:53 2017 +0000
+
+    added the mail cmd to wrapper.
+
+commit f9e0f5f794c32b846fb1abf60c427c5940518c71
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Tue Feb 21 00:08:01 2017 +0000
+
+    not needed
+
+commit 6071ada6066e9451846f80dc516cb76055dddf89
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Mon Feb 20 23:59:33 2017 +0000
+
+    removed ./filter.sh
+
+commit 434182feaa9608a5f4c76b762e1fabf6333354b3
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Mon Feb 20 23:57:00 2017 +0000
+
+    took out piping
+
+commit fc9ee9f4d27d47ffa64ed13b4f58e6e72300021e
+Author: damooch <damooch@users.noreply.github.com>
+Date:   Mon Feb 20 16:28:22 2017 -0700
+
+    update README
+
+commit 95df8dae6b60868ecee1f3cf6d5da33c961360f1
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Sun Feb 19 23:45:57 2017 +0000
+
+    added all script calls need to test when al scripts are done
+
+commit 78ab1f1fd1365581f2b41974b75ca8ff38437b13
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Sun Feb 19 23:30:40 2017 +0000
+
+    added a comment to test
+
+commit 82180f17dc9ecf75a6018ea005f907a4994cfba5
+Author: Mashael2 <ma01412@icarus.cs.weber.edu>
+Date:   Sun Feb 19 19:55:38 2017 +0000
+
+    Update
+
+commit 95593d3d8bc1666e02ca77b6f7e9811969ea18d1
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Sun Feb 19 05:37:00 2017 +0000
+
+    changed script path
+
+commit d4e8b9a1427740e3a134c43705ca80b8981c087b
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Sun Feb 19 05:35:40 2017 +0000
+
+    crontab file created
+
+commit 2bd85da7fb7f09d7e5038a17160c8494d4503db4
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Sun Feb 19 03:23:46 2017 +0000
+
+    added filter.sh
+
+commit d3d56602a5d3a3028e249a1023650fbdea19bfd4
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Sun Feb 19 02:45:37 2017 +0000
+
+    calls wget.sh and expand.sh need to find a way to pass in variables instead of hardcode
+
+commit ac2e3c495f087505efb2029019bb88613cd63eca
+Author: omega-wyd <mbrewerramirez@mail.weber.edu>
+Date:   Thu Feb 16 15:36:53 2017 -0700
+
+    Update README.md
+    
+    added header , wget and wrapper section
+
+commit 1e21c5c1538594fc2c0d7a3e09295f59c2fe8c06
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Thu Feb 16 22:14:33 2017 +0000
+
+    wget.sh pulls files succesfully
+
+commit 169abb9875914b648e805ac17d78d6c1cc19958b
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Thu Feb 16 22:13:35 2017 +0000
+
+    calls wget.sh and expand.sh need to find a way to pass in variables instead of hardcode
+
+commit 828bc8d7020d914500e42d164e16e447f6aadf1e
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Thu Feb 16 21:54:32 2017 +0000
+
+    working
+
+commit 9536f1f008f374dd4e20e5eebfcecbf4123535e5
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Thu Feb 16 21:53:34 2017 +0000
+
+    wget working correctly
+
+commit 7faad060cae3c9d640aeb6eb0a35f410d3a2e975
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Thu Feb 16 21:16:47 2017 +0000
+
+    wget retirves files.
+
+commit e609e5ccd75325cc959aea6e67966a016114b983
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Thu Feb 16 18:26:22 2017 +0000
+
+    wrapper.sh and wget.sh modified.
+
+commit 2e71c56cdabb9e841993a4166bcd7d32b624ed20
+Author: Michael Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Thu Feb 16 18:17:10 2017 +0000
+
+    wget and wrapper modified
+
+commit fa8b234cc1f4b9a14b958ac152a7fa0167712530
+Merge: 1e42c87 2c44864
+Author: damooch <damooch@users.noreply.github.com>
+Date:   Wed Feb 15 00:08:09 2017 -0700
+
+    Merge pull request #4 from omega-wyd/working
+    
+    modified: readme, expand.sh  added: filter.sh, filter.awk
+
+commit 2c448643b1b7a0d6eaef5d3ce22720b04f43c470
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Wed Feb 15 07:06:20 2017 +0000
+
+    added README doc for filter.sh and filter.awk, modified expand.sh, created filter.sh and filter.awk
+
+commit 1e42c87a4b48cc38e30a2c446851316355b141ab
+Merge: 7a4ec5c f555d4c
+Author: damooch <damooch@users.noreply.github.com>
+Date:   Tue Feb 14 21:56:01 2017 -0700
+
+    Merge pull request #3 from omega-wyd/working
+    
+    Added templates for scripts
+
+commit f555d4c83520b14f6bde76a85d00b3ef878c582d
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Wed Feb 15 04:55:21 2017 +0000
+
+    Added templates for scripts
+
+commit 7a4ec5c8ca12271be35a73ec906d854ffc64a9f8
+Merge: 83ecdd2 1622f00
+Author: damooch <damooch@users.noreply.github.com>
+Date:   Tue Feb 14 21:52:02 2017 -0700
+
+    Merge pull request #2 from omega-wyd/working
+    
+    Finished expand.sh, added delete.sh, updated readme.md
+
+commit 1622f0075bb3e6871c157abfdb3020169a466dfa
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Wed Feb 15 04:48:03 2017 +0000
+
+    modified expand.sh and added documentation in README.md for same script
+
+commit 5e634db87ebb97d341c0001ac814077c62eb3670
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Wed Feb 15 04:29:23 2017 +0000
+
+    created expand.sh script
+
+commit a669f261643e78520cf716f0d917006c422f1d6c
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Tue Feb 14 20:28:33 2017 +0000
+
+    added delete.sh
+
+commit 83ecdd23742b6f479c1330ec2f3f200a6b2301b2
+Merge: 88a4203 f15315d
+Author: damooch <damooch@users.noreply.github.com>
+Date:   Tue Feb 14 13:06:17 2017 -0700
+
+    Merge pull request #1 from omega-wyd/working
+    
+    Initial Commits
+
+commit f15315d8d04bd66734b1038cbdc4560e606122ef
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Tue Feb 14 20:05:20 2017 +0000
+
+    Initial Commits
+
+commit 88a4203311fad043b9539170aef538b9d186e023
+Author: Micheal Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Tue Feb 14 11:31:16 2017 -0700
+
+    first commit
