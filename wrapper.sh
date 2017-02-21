@@ -68,7 +68,7 @@ fi
 
 for var in $(echo $year | sed "s/,/ /g")
 do
-	./wget $var
+	./wget.sh $var
 done
 
 # Calling expand.sh to expand files.
