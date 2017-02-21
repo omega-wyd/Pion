@@ -35,8 +35,12 @@ fi
 
 echo "Cleaning up.."
 
-rm -r $PWD/tmp
+for file in $PWD/tmp/*
+do
+	rm $file
+done
 
+rmdir tmp
 
 exit 0
 

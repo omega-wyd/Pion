@@ -22,11 +22,13 @@
 user=$1
 pass=$2
 host="137.190.19.99" #address
-file="$PWD/tmp/outfile.csv" #file to send  DONT know the zip ext
+file=$(find ./ -name "MOCK_DATA_FILTER_*.zip") #fle to send  DONT know the zip ext
 
+echo "checking for user and pass"
 
 if [[ -z $user ]] && [[ -z  $pass ]]
 then
+	echo "user and pass not provided, sending as annonymous"
 	#use default annonymous
 	userd='anonymous'
 
@@ -39,6 +41,7 @@ EOF
 
 else
 
+	echo "Logging into ftp server as $user"
 ftp -n $host <<EOF
 quote user $user
 quote pass $pass

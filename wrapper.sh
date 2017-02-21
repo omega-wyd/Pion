@@ -24,7 +24,7 @@
 usage()
 {
 	echo "Invalid Option"
-	echo "Usage: $0 [-y year1,year2] [-e email] [-u username] [-p passwd]"
+	echo "Usage: $0 [-y year1,year2] [-e email] [-u 'username'] [-p 'passwd']"
 	echo " -y -e are required."
 	echo "Enter -u and -p for ftp access."
 }
@@ -36,6 +36,8 @@ then
 	exit 1
 fi
 
+echo
+echo "Checking user options and parameters" 
 
 # Getopts while loop
 while getopts ":y:e:u:p:" opt
@@ -47,10 +49,9 @@ do
 			;;
 		u) user=$OPTARG #username for ftp account	
 			;;
-		p) passwd='$OPTARG' # password needed for ftp server.
+		p) passwd=$OPTARG # password needed for ftp server.
 			;;
-		\?)
-			usage
+		\?) usage
 			;;
 	esac
 done
@@ -63,36 +64,43 @@ then
 	exit 1
 fi
 
+echo
+echo "Getting user files by year"
 
 # divide the substring of year and save each year to a variable.
-
 for var in $(echo $year | sed "s/,/ /g")
 do
 	./wget $var
 done
 
 # Calling expand.sh to expand files.
+echo
+echo "Expanding files"
 ./expand.sh 
+
 # Calling compress.sh to compress new file
+echo
+echo "Compressing filtered output"
 ./compress.sh 
+
 #calling ftp.sh
+host="137.190.19.99"
+echo
+echo "Sending file to FTP server @ $host"
 ./ftp.sh $user $passwd 
 
-
-host="137.190.19.99"
-RESULT=$?
-if [ $RESULT -eq 0 ]; then
+if [[ $? -eq 0 ]]; then
+	echo "success"
+	echo
+	echo "Sending confirmation to $email"
 	` mail -s "file transfered " $email <<< "Succesfully transfered file to FTP server at IP $host."`
   else
 	    echo "failed"
 	fi
 
 #calling delete.sh  
+echo
 ./delete.sh
-
-
-
-
+echo "Removed directory $PWD/tmp" 
 
 exit 0
-
