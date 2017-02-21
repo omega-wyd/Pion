@@ -80,7 +80,7 @@ done
 
 
 host="137.190.19.99"
-RESULT=$?
+RESULT='$?'
 if [ $RESULT -eq 0 ]; then
 	` mail -s "file transfered " $email <<< "Succesfully transfered file to FTP server at IP $host."`
   else
