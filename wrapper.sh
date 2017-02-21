@@ -86,9 +86,6 @@ fi
 ./compress.sh 
 #calling ftp.sh
 ./ftp.sh 
-#calling delete.sh  
-./delete.sh
-
 
 
 RESULT=$?
@@ -97,6 +94,9 @@ if [ $RESULT -eq 0 ]; then
   else
 	    echo "failed"
 	fi
+
+#calling delete.sh  
+./delete.sh
 
 #mail -s "file transfered " $email <<< "Succesfully transfered file to FTP  server"<br>
 
