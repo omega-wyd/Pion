@@ -27,13 +27,13 @@ usage()
 	echo "Usage: $0 [-y year1,year2] [-e email] [-u username] [-p passwd]"
 	echo " -y -e are required."
 	echo "Enter -u and -p for ftp access."
-	exit 1
 }
 
 # if the user desires to use $0 --help
 if [[ $1 == "--help" ]]
 then
 	usage
+	exit 1
 fi
 
 
@@ -57,29 +57,20 @@ done
 
 
 #IF statement to test if parameters are set. -z checks to see if value is null
-if [[ -z $year ]] || [[ -z $email ]]
+if [[ -z $year ]] && [[ -z $email ]]
 then 
 	usage
+	exit 1
 fi
 
 
 # divide the substring of year and save each year to a variable.
 
-IFS=, read year1 year2 <<< $year
+for var in $(echo $year | sed "s/,/ /g")
+do
+	./wget $var
+done
 
-#check to see if year is 2015 or 2016
-if [[ $year1 != 2015 ]] # || [[ $year2 != 2015 ]]
-then
-	echo "needs to be 2015 or 2016"
-fi
-
-if [[ $year2 != 2016 ]] # || [[ $year1 != 2016 ]]
-then
-	echo "needs to be 2015 or 2016"
-fi
-
-# Calling wget.sh
-./wget.sh $year1 $year2 
 # Calling expand.sh to expand files.
 ./expand.sh 
 # Calling compress.sh to compress new file
@@ -88,9 +79,10 @@ fi
 ./ftp.sh $user $passwd 
 
 
+host="137.190.19.99"
 RESULT=$?
 if [ $RESULT -eq 0 ]; then
-	` mail -s "file transfered " $email <<< "Succesfully transfered file to FTP server"`
+	` mail -s "file transfered " $email <<< "Succesfully transfered file to FTP server at IP $host."`
   else
 	    echo "failed"
 	fi
@@ -98,7 +90,6 @@ if [ $RESULT -eq 0 ]; then
 #calling delete.sh  
 ./delete.sh
 
-#mail -s "file transfered " $email <<< "Succesfully transfered file to FTP  server"<br>
 
 
 
