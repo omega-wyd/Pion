@@ -1,52 +1,101 @@
-#!/bin/bash - 
-#===============================================================================
-#
-#          FILE: wget.sh
+AGE: ./wrapper.sh 
 # 
-#         USAGE: ./wget.sh 
+#   DESCRIPTION: This script controls 6 other scripts written by team Pion. 
 # 
-#   DESCRIPTION: This script is meant to retrive two files based on the
-# 					input parameter.
 #       OPTIONS: ---
-#  REQUIREMENTS: ---
+#  REQUIREMENTS: -y -e -u -p
 #          BUGS: ---
 #         NOTES: ---
-#        AUTHOR: Micheal Brewer II Email: mbrewerramirez@mail.weber.edu
+#        AUTHOR: Micheal Brewer (), mbrewerramirez@mail.weber.edu
 #  ORGANIZATION: Pion
-#       CREATED: 02/15/2017 04:54
+#       CREATED: 02/15/2017 20:19
 #      REVISION:  ---
 #===============================================================================
 
-#set -o nounset                              # Treat unset variables as an error
+#set -o nounset                  # Treat unset variables as an error
 
 
-#help function with script usage
-
+# how the script is suppose to be used.
 usage()
 {
-	echo "this script is called from the wrapper.sh."
-	echo "Usage: ./wrapper.sh -y [year1,year2,etc] -e [email] -u [user] -p [password]"
+	echo "Invalid Option"
+	echo "Usage: $0 [-y year1,year2] [-e email] [-u 'username'] [-p 'passwd']"
+	echo " -y -e are required."
+	echo "Enter -u and -p for ftp access."
 }
 
-# Check for help call
+# if the user desires to use $0 --help
 if [[ $1 == "--help" ]]
+	then
+	usage
+	exit 1
+fi
+
+echo
+echo "Checking user options and parameters" 
+
+# Getopts while loop
+while getopts ":y:e:u:p:" opt
+do 
+	case $opt in
+		y) year=$OPTARG # year to find the appropriate file.
+		;;
+		e) email=$OPTARG #email to send mail notifications
+		;;
+		u) user=$OPTARG #username for ftp account
+		;;
+		p) passwd=$OPTARG # password needed for ftp server.
+		;;
+		\?) usage
+		;;
+	esac
+done
+
+
+#IF statement to test if parameters are set. -z checks to see if value is null
+if [[ -z $year ]] && [[ -z $email ]]
 then 
 	usage
 	exit 1
 fi
 
-year=$1
+echo
+echo "Getting user files by year"
 
+# divide the substring of year and save each year to a variable.
+for var in $(echo $year | sed "s/,/ /g")
+do
+	./wget $var
+done
 
-if [[ $year -eq 2015 || $year -eq 2016 ]] 
-then
-	wget icarus.cs.weber.edu/~hvalle/cs3030/MOCK_DATA_$year.tar.gz
+# Calling expand.sh to expand files.
+echo
+echo "Expanding files"
+./expand.sh 
+
+# Calling compress.sh to compress new file
+echo
+echo "Compressing filtered output"
+./compress.sh 
+
+#calling ftp.sh
+host="137.190.19.99"
+echo
+echo "Sending file to FTP server @ $host"
+./ftp.sh $user $passwd 
+
+if [[ $? -eq 0 ]]; then
+	echo "success"
+	echo
+	echo "Sending confirmation to $email"
+	` mail -s "file transfered " $email <<< "Succesfully transfered file to FTP server at IP $host."`
 else
- echo $0 "year input parameter must be either 2015 or 2016."
+	echo "failed"
 fi
 
-
-
+#calling delete.sh  
+echo
+./delete.sh
+echo "Removed directory $PWD/tmp" 
 
 exit 0
-
