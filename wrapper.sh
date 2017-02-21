@@ -40,9 +40,7 @@ year=$1
 
 if [[ $year -eq 2015 || $year -eq 2016 ]] 
 then
-
 	wget icarus.cs.weber.edu/~hvalle/cs3030/MOCK_DATA_$year.tar.gz
-
 else
  echo $0 "year input parameter must be either 2015 or 2016."
 fi
