@@ -34,13 +34,16 @@ then
 fi
 
 echo "Cleaning up.."
-
+mv *.zip tmp
+mv *.tar.gz tmp
 for file in $PWD/tmp/*
 do
 	rm $file
 done
 
 rmdir tmp
+
+echo "removed directory $PWD/tmp"
 
 exit 0
 

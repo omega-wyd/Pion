@@ -22,7 +22,7 @@
 user=$1
 pass=$2
 host="137.190.19.99" #address
-file=$(find ./tmp/ -name "MOCK_DATA_FILTER_*.zip") #fle to send  DONT know the zip ext
+file=$(find ./ -name "MOCK_DATA_FILTER_*.zip") #fle to send  DONT know the zip ext
 
 echo "checking for user and pass"
 
