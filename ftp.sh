@@ -19,35 +19,33 @@
 
 #set -o nounset                              # Treat unset variables as an error
 
-
 user=$1
 pass=$2
-HOST=' @icarus.cs.weber.edu ' #address
-FILE='/$PWD/temp/outfile.csv ' #file to send  DONT know the zip ext
+host="137.190.19.99" #address
+file="$PWD/tmp/outfile.csv" #file to send  DONT know the zip ext
 
 
-
-
-if [[ ! -z $1 ]] && [[ !-z  $2 ]]
+if [[ -z $user ]] && [[ -z  $pass ]]
 then
-#use pass and username
+	#use default annonymous
+	userd='anonymous'
 
-`ftp -n $HOST << END_SCRIPT
-quote USER $user
-quote PASS $pass
-binary
-put $FILE
-quit
-END_SCRIPT`
+ftp -n $host <<EOF
+quote user $userd
+quote pass $pass
+put $file
+bye
+EOF
 
 else
 
-#use annonymous 
+ftp -n $host <<EOF
+quote user $user
+quote pass $pass
+put $file
+bye
+EOF
 
-
-
-
-
+fi
 
 exit 0
-

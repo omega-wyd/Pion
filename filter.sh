@@ -42,6 +42,9 @@ file=$1
 awksrc="$PWD/filter.awk"
 output="$PWD/tmp/outfile.csv"
 
+echo "Filtering $file by female Canadian residents"
+echo "Appending users to $output"
+
 # awk to take values and append it to new output file
 awk -f $awksrc $file >> $output
 

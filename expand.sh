@@ -39,14 +39,20 @@ fi
 
 # Check if directory exists
 dir="$PWD/tmp"
-if [[ ! -d $dir ]]
+echo "Checking if $dir exists"
+if [[ -d $dir ]]
 then
+	echo "$dir exists"
+else
+	echo "$dir doesn't exist"
+	echo "creating directory"
 	mkdir -p $dir
 fi
 
 # For each compressed file passed as param expand into $PWD/tmp
 for filename in *.tar.gz
 do
+	echo "Expanding $filename"
 	tar -zxvf $filename -C $dir 
 done
 

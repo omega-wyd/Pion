@@ -25,8 +25,8 @@ wget.sh :
 	```
 	Usage: ./wget.sh [year1] [year2]
 	```
-
-
+	!!!! (Needs to do the checking for 2015 and 2016 inside of this) !!!!
+	!!!! (Also needs status messages echod) !!!!
 
 # --------------------  EXPAND  -------------------- #
 
@@ -62,7 +62,11 @@ filter.sh :
 
 # --------------------  COMPRESS  -------------------- #
 
+compress.sh :
+     This script is called with ./compress.sh 
 
+	 The scipt begins with a help function so if someone calls the script with --help as 1st parameter
+	 This scripts will compress the final filter file using zip and then rename it with: MOCK_DATA_FILTER_YYYY_MM_DD_HH:MM.zip
 
 
 # --------------------  FTP  -------------------- #
