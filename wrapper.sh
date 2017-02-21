@@ -81,11 +81,12 @@ done
 
 host="137.190.19.99"
 RESULT='$?'
-if [ $RESULT -eq 0 ]; then
-	` mail -s "file transfered " $email <<< "Succesfully transfered file to FTP server at IP $host."`
+if [[ $RESULT == 0 ]]
+	then
+		` mail -s "file transfered " $email <<< "Succesfully transfered file to FTP server at IP $host."`
   else
-	    echo "failed"
-	fi
+	    echo "Failed to transfer file to FTP server."
+fi
 
 #calling delete.sh  
 ./delete.sh
