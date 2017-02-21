@@ -25,8 +25,8 @@ wget.sh :
 	```
 	Usage: ./wget.sh [year1] [year2]
 	```
-
-
+	!!!! (Needs to do the checking for 2015 and 2016 inside of this) !!!!
+	!!!! (Also needs status messages echod) !!!!
 
 # --------------------  EXPAND  -------------------- #
 
