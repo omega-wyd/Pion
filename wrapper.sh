@@ -1,4 +1,9 @@
-AGE: ./wrapper.sh 
+##!/bin/bash - 
+#===============================================================================
+#
+#          FILE: wrapper.sh
+# 
+#         USAGE: ./wrapper.sh 
 # 
 #   DESCRIPTION: This script controls 6 other scripts written by team Pion. 
 # 
