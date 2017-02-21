@@ -85,7 +85,7 @@ fi
 # Calling compress.sh to compress new file
 ./compress.sh 
 #calling ftp.sh
-./ftp.sh 
+./ftp.sh $user $passwd 
 
 
 RESULT=$?
