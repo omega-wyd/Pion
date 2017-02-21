@@ -47,7 +47,7 @@ do
 			;;
 		u) user=$OPTARG #username for ftp account	
 			;;
-		p) passwd=$OPTARG # password needed for ftp server.
+		p) passwd='$OPTARG' # password needed for ftp server.
 			;;
 		\?)
 			usage
