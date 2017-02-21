@@ -62,7 +62,11 @@ filter.sh :
 
 # --------------------  COMPRESS  -------------------- #
 
+compress.sh :
+     This script is called with ./compress.sh 
 
+	 The scipt begins with a help function so if someone calls the script with --help as 1st parameter
+	 This scripts will compress the final filter file using zip and then rename it with: MOCK_DATA_FILTER_YYYY_MM_DD_HH:MM.zip
 
 
 # --------------------  FTP  -------------------- #
