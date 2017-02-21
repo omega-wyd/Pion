@@ -24,7 +24,8 @@
 
 usage()
 {
-	echo "Usage: $0 [year1] [year2]"
+	echo "this script is called from the wrapper.sh."
+	echo "Usage: ./wrapper.sh -y [year1,year2,etc] -e [email] -u [user] -p [password]"
 }
 
 # Check for help call
@@ -34,11 +35,17 @@ then
 	exit 1
 fi
 
+year=$1
 
 
-wget icarus.cs.weber.edu/~hvalle/cs3030/MOCK_DATA_$1.tar.gz
-wget icarus.cs.weber.edu/~hvalle/cs3030/MOCK_DATA_$2.tar.gz 
+if [[ $year -eq 2015 || $year == 2016 ]] 
+then
 
+	wget icarus.cs.weber.edu/~hvalle/cs3030/MOCK_DATA_$year.tar.gz
+
+else
+ echo $0 "year input parameter must be either 2015 or 2016."
+fi
 
 
 
