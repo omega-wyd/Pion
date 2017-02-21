@@ -40,9 +40,10 @@ fi
 # Check if directory exists
 dir="$PWD/tmp"
 echo "Checking if $dir exists"
-if [[ ! -d $dir ]]
-	echo "$dir exists"
+if [[ -d $dir ]]
 then
+	echo "$dir exists"
+else
 	echo "$dir doesn't exist"
 	echo "creating directory"
 	mkdir -p $dir
