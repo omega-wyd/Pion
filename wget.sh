@@ -38,7 +38,7 @@ fi
 year=$1
 
 
-if [[ $year -eq 2015 || $year == 2016 ]] 
+if [[ $year == 2015 || $year == 2016 ]] 
 then
 
 	wget icarus.cs.weber.edu/~hvalle/cs3030/MOCK_DATA_$year.tar.gz
