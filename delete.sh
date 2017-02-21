@@ -19,6 +19,20 @@
 
 #set -o nounset                              # Treat unset variables as an error
 
+# Help function
+help ()
+{
+	echo "Usage ./delete.sh"
+	echo "Delete the temp folder with all the files"
+}
+
+# Check for help call
+if [[ $1 == "--help" ]]
+then
+	help
+	exit 1
+fi
+
 echo "Cleaning up.."
 
 rm -r $PWD/tmp
