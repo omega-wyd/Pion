@@ -40,7 +40,7 @@ theFile=MOCK_DATA_FILTER_$date.zip
 
 echo "Zipping up new file"
 dir="$PWD/tmp/outfile.csv"
-zip $theFile $dir
+zip $PWD/tmp/$theFile $dir
 
 exit 0
 

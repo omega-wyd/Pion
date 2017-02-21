@@ -70,7 +70,7 @@ echo "Getting user files by year"
 # divide the substring of year and save each year to a variable.
 for var in $(echo $year | sed "s/,/ /g")
 do
-	./wget $var
+	./wget.sh $var
 done
 
 # Calling expand.sh to expand files.

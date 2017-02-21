@@ -52,8 +52,9 @@ fi
 # For each compressed file passed as param expand into $PWD/tmp
 for filename in *.tar.gz
 do
+	mv $filename $dir
 	echo "Expanding $filename"
-	tar -zxvf $filename -C $dir 
+	tar -zxvf $dir/$filename -C $dir 
 done
 
 # Loop over files in tmp
