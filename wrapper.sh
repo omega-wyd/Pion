@@ -91,6 +91,13 @@ fi
 
 
 
+RESULT=$?
+if [ $RESULT -eq 0 ]; then
+	` mail -s "file transfered " $email <<< "Succesfully transfered file to FTP server"`
+  else
+	    echo "failed"
+	fi
+
 #mail -s "file transfered " $email <<< "Succesfully transfered file to FTP  server"<br>
 
 
