@@ -39,8 +39,8 @@ date=`date +%Y_%m_%d_%H:%M`
 theFile=MOCK_DATA_FILTER_$date.zip
 
 echo "Zipping up new file"
-
-zip $theFile filename.csv
+dir="$PWD/tmp/outfile.csv"
+zip $theFile $dir
 
 exit 0
 
