@@ -1,3 +1,33 @@
+commit cb690080cce63652a3ed3976017cc9fba42b5146
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Wed Feb 22 23:26:56 2017 +0000
+
+    Added error code handling, echo formatting, and tmp removal on error
+
+commit 952683dacb2ddeb3253057e00df05803ddc65c28
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Tue Feb 21 22:09:52 2017 +0000
+
+    Finsished the ftp.sh
+
+commit 9f0dc7e637cda4d125ca1ac972eae6aa8ce02d88
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Tue Feb 21 22:04:51 2017 +0000
+
+    fixed merges
+
+commit 758f2f0ba41d021831d49120f59e71dcdcbdfcad
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Tue Feb 21 21:09:28 2017 +0000
+
+    resolved merge conflicts
+
+commit beb621383d4ed3332893594bd4ad9deecb205ea8
+Author: David Mariluch <davidmariluch@mail.weber.edu>
+Date:   Tue Feb 21 20:19:19 2017 +0000
+
+    added git log
+
 commit 8b36b7948daf1ee1fe7737896c852b96e3821c86
 Author: David Mariluch <davidmariluch@mail.weber.edu>
 Date:   Tue Feb 21 20:12:23 2017 +0000
