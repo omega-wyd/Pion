@@ -29,6 +29,13 @@ usage()
 	echo "Enter -u and -p for ftp access."
 }
 
+close()
+{
+	./delete.sh
+	exit 1
+}
+
+
 # if the user desires to use $0 --help
 if [[ $1 == "--help" ]]
 	then
@@ -58,8 +65,14 @@ done
 
 
 #IF statement to test if parameters are set. -z checks to see if value is null
-if [[ -z $year ]] && [[ -z $email ]]
+if [[ -z $year ]]
 then 
+	usage
+	exit 1
+fi
+
+if [[ -z $email ]]
+then
 	usage
 	exit 1
 fi
@@ -73,15 +86,33 @@ do
 	./wget.sh $var
 done
 
+# check scrpt for return code if != 1 then close script and clean files
+if [[ $? -ne 0 ]]
+then
+	close
+fi
+
 # Calling expand.sh to expand files.
 echo
 echo "Expanding files"
 ./expand.sh 
 
+# check scrpt for return code if != 1 then close script and clean files
+if [[ $? -ne 0 ]]
+then
+	close
+fi
+
 # Calling compress.sh to compress new file
 echo
 echo "Compressing filtered output"
 ./compress.sh 
+
+# check scrpt for return code if != 1 then close script and clean files
+if [[ $? -ne 0 ]]
+then
+	close
+fi
 
 #calling ftp.sh
 host="137.190.19.99"
@@ -99,8 +130,6 @@ else
 fi
 
 #calling delete.sh  
-echo
 ./delete.sh
-echo "Removed directory $PWD/tmp" 
 
 exit 0

@@ -23,6 +23,8 @@ user=$1
 pass=$2
 host="137.190.19.99" #address
 file=$(find ./ -name "MOCK_DATA_FILTER_*.zip") #fle to send  DONT know the zip ext
+ftp_success_msg="226 Transfer Complete"
+ftplog=$PWD/tmp/ftplogfile
 
 echo "checking for user and pass"
 
@@ -32,23 +34,47 @@ then
 	#use default annonymous
 	userd='anonymous'
 
-ftp -n $host <<EOF
-quote user $userd
-quote pass $pass
-cd MockData
-put $file
-bye
+	ftp -nv $host <<EOF > $ftplog
+	quote user $userd
+	quote pass $pass
+	cd MockData
+	put $file
+	bye
 EOF
+
+	grep "230 Login successful" $ftplog
+	grep "226 Transfer complete" $ftplog
+	rc=$?
+
+	if [[ $rc -eq 0 ]]
+	then
+		echo "ftp OK"
+	else
+		echo "ftp Error"
+		exit 1
+	fi
 
 else
 
 	echo "Logging into ftp server as $user"
-ftp -n $host <<EOF
-quote user $user
-quote pass $pass
-put $file
-bye
+	ftp -nv $host <<EOF > $ftplog
+	quote user $user
+	quote pass $pass
+	put $file
+	bye
 EOF
+
+	grep "230 Login successful" $ftplog
+	grep "226 Transfer complete" $ftplog
+	rc=$?
+
+	if [[ $rc -eq 0 ]]
+	then
+		echo "ftp OK"
+	else
+		echo "ftp Error"
+		exit 1
+	fi
 
 fi
 

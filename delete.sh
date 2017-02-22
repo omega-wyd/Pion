@@ -33,17 +33,22 @@ then
 	exit 1
 fi
 
+echo
 echo "Cleaning up.."
+
 mv *.zip tmp
 mv *.tar.gz tmp
+
 for file in $PWD/tmp/*
 do
 	rm $file
 done
 
 rmdir tmp
-
-echo "removed directory $PWD/tmp"
+if [[ $? -eq 0 ]]
+then
+	echo "Removed directory $PWD/tmp"
+fi
 
 exit 0
 

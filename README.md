@@ -71,8 +71,17 @@ compress.sh :
 
 # --------------------  FTP  -------------------- #
 
+ftp.sh :
+	This script is called with ./ftp $user $pass
 
+	the script starts by finding the local zip file with filtered data in it and stores it into a variable
 
+	then the script takes in two parameters and evaluates if they are empty
+
+	if they are empty the script will set the user to anonymous and pass in an empty password
+	this will make the script use a default ftp protical, change the default dir to MockData, and store the local file that has been zipped to a default file in the local student server /srv/usr/MockData
+
+	if they are not empty the script uses the users credentials to log into the server and store the file that has been zipped to their /home/ directory
 
 # --------------------  DELETE   -------------------- #
 
