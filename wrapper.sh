@@ -24,7 +24,7 @@
 usage()
 {
 	echo "Invalid Option"
-	echo "Usage: $0 [-y year1,year2] [-e email] [-u 'username'] [-p 'passwd']"
+	echo "Usage: $0 [-y year] [-e email] [-u 'username'] [-p 'passwd']"
 	echo " -y -e are required."
 	echo "Enter -u and -p for ftp access."
 }
@@ -80,11 +80,9 @@ fi
 echo
 echo "Getting user files by year"
 
-# divide the substring of year and save each year to a variable.
-for var in $(echo $year | sed "s/,/ /g")
-do
-	./wget.sh $var
-done
+# calling wget.sh with the year
+./wget.sh $year
+
 
 # check scrpt for return code if != 1 then close script and clean files
 if [[ $? -ne 0 ]]
